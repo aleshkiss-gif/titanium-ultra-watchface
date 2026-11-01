@@ -57,7 +57,7 @@ private class TitaniumRenderer(
         canvas.drawText(text, x, y, paint)
     }
 
-    override fun render(canvas: Canvas, bounds: Rect, zonedDateTime: ZonedDateTime, renderParameters: androidx.wear.watchface.RenderParameters) {
+    override fun render(canvas: Canvas, bounds: Rect, zonedDateTime: ZonedDateTime) {
         val w = bounds.width().toFloat()
         val h = bounds.height().toFloat()
         canvas.drawColor(Color.BLACK)
@@ -80,7 +80,7 @@ private class TitaniumRenderer(
         canvas.restore()
     }
 
-    override fun renderHighlightLayer(canvas: Canvas, bounds: Rect, zonedDateTime: ZonedDateTime, renderParameters: androidx.wear.watchface.RenderParameters) {
+    override fun renderHighlightLayer(canvas: Canvas, bounds: Rect, zonedDateTime: ZonedDateTime) {
         canvas.drawColor(Color.TRANSPARENT, android.graphics.PorterDuff.Mode.CLEAR)
     }
 }
