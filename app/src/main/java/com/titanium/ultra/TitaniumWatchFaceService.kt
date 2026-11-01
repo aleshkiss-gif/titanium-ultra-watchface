@@ -6,7 +6,6 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
 import android.view.SurfaceHolder
-import androidx.wear.watchface.CanvasRenderer
 import androidx.wear.watchface.Renderer
 import androidx.wear.watchface.WatchFace
 import androidx.wear.watchface.WatchFaceService
@@ -34,11 +33,11 @@ private class TitaniumRenderer(
     surfaceHolder: SurfaceHolder,
     style: CurrentUserStyleRepository,
     watchState: androidx.wear.watchface.WatchState
-) : CanvasRenderer(
+) : Renderer.CanvasRenderer(
     surfaceHolder,
     style,
     watchState,
-    CanvasType.HARDWARE,
+    Renderer.CanvasType.HARDWARE,
     1000L,
     false
 ) {
