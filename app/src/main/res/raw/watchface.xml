@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WatchFace width="450" height="450">
     <Scene>
-        <PartImage x="0" y="0" width="450" height="450">
-            <Image resource="titanium_dial" />
-        </PartImage>
-        <DigitalClock x="105" y="340" width="240" height="70">
-            <TimeText x="0" y="0" width="240" height="70" format="HH:mm">
-                <Font family="SYNC_TO_DEVICE" size="48" color="#E3E8F0" />
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="0" y="0" width="450" height="450"><Fill color="#090B0F"/></Ellipse>
+            <Ellipse x="12" y="12" width="426" height="426"><Stroke color="#9299A3" thickness="5"/></Ellipse>
+            <Ellipse x="27" y="27" width="396" height="396"><Stroke color="#444D58" thickness="2"/></Ellipse>
+            <Ellipse x="55" y="55" width="340" height="340"><Stroke color="#FF781F" thickness="2"/></Ellipse>
+            <Ellipse x="150" y="150" width="150" height="150"><Stroke color="#465363" thickness="3"/></Ellipse>
+        </PartDraw>
+        <PartText x="60" y="74" width="330" height="40">
+            <Text><Font family="SYNC_TO_DEVICE" size="26" color="#FF8B38">TITANIUM ULTRA</Font></Text>
+        </PartText>
+        <DigitalClock x="45" y="165" width="360" height="100">
+            <TimeText x="0" y="0" width="360" height="100" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="88" color="#E6EDF7" />
             </TimeText>
         </DigitalClock>
+        <PartText x="140" y="288" width="170" height="50">
+            <Text>
+                <Font family="SYNC_TO_DEVICE" size="30" color="#AAB8C9">
+                    <Template><![CDATA[%02d.%02d]]><Parameter expression="[DAY]"/><Parameter expression="[MONTH]"/></Template>
+                </Font>
+            </Text>
+        </PartText>
+        <PartText x="120" y="348" width="210" height="42">
+            <Text>
+                <Font family="SYNC_TO_DEVICE" size="24" color="#FF8B38">
+                    <Template><![CDATA[STEPS %d]]><Parameter expression="[STEP_COUNT]"/></Template>
+                </Font>
+            </Text>
+        </PartText>
     </Scene>
 </WatchFace>
