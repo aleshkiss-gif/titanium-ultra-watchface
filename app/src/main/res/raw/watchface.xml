@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450">
+    <Scene>
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="titanium_dial" />
+        </PartImage>
+        <DigitalClock x="105" y="340" width="240" height="70">
+            <TimeText x="0" y="0" width="240" height="70" format="HH:mm">
+                <Font family="SYNC_TO_DEVICE" size="48" color="#E3E8F0" />
+            </TimeText>
+        </DigitalClock>
+    </Scene>
+</WatchFace>
